@@ -6,8 +6,9 @@ This plugin provides clever commands to split window and open help window.
 - `:CleverSplit` automatically determines the way to split the window, horizontally or vertically and adjusts window width.
 - `:CleverHSplit` splits window horizontally and adjusts window width.
 - `:CleverVSplit` splits window vertically and adjusts window width.
+- `:CleverHelp` opens help in cleverly opened window.
 
-If `g:clever_split#overwrite_default_mappings` is defined, `<C-w>w` and `<C-w>v` are overwritten and `<C-w><Leader>` is defined automatically.
+If `g:clever_split#overwrite_default_mappings` is defined, `<C-w>w`, `<C-w>v` and `K` (`K` is in vim) are overwritten and `<C-w><Leader>` is defined automatically.
 
 If you customize the behavior, `g:clever_split#winwidth_limit` and `g:clever_split#width_height_rate` are available.
 
