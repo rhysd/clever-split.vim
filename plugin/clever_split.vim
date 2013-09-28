@@ -5,7 +5,7 @@ endif
 command! -nargs=* CleverHSplit call clever_split#split(<q-args>)
 command! -nargs=* CleverVSplit call clever_split#vsplit(<q-args>)
 command! -nargs=* CleverSplit call clever_split#clever_split(<q-args>)
-command! -nargs=* CleverHelp call clever_split#help(<q-args>)
+command! -nargs=+ -complete=help CleverHelp call clever_split#help(<q-args>)
 
 if exists('g:clever_split#overwrite_default_mappings')
     nnoremap <silent><C-w>s :<C-u>CleverHSplit<CR>
