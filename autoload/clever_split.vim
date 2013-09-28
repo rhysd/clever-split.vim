@@ -1,5 +1,5 @@
 function! clever_split#split(...)
-    execute 'vsplit' join(a:000, ' ')
+    execute 'split' join(a:000, ' ')
     call clever_split#resize_winwidth()
 endfunction
 
