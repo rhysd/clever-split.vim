@@ -23,9 +23,8 @@ function! clever_split#resize_winwidth()
     let max_col = 0
     for lnum in range(1, line('$'))
         let len = len(getline(lnum))
-        if max_col < len
-            let max_col = len
-        endif
+        if len > winwidth(0) | return | endif
+        if max_col < len | let max_col = len | endif
     endfor
     execute 'vertical resize' max_col
 endfunction
